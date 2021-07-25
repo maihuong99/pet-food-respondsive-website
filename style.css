@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 :root{
-    --yellow: #FCDD26;
+    --blue:rgb(179, 179, 247);
 }
 
 *{
@@ -16,7 +16,7 @@
 
 *::selection{
     background: #333;
-    color: var(--yellow);
+    color: var(--blue);
 }
 
 html{
@@ -24,17 +24,17 @@ html{
     overflow-x: hidden;
 }
 
-html::-webkit-scrollbar{
+/* html::-webkit-scrollbar{
     width:1.3rem;
-}
+} */
 
-html::-webkit-scrollbar-track{
+/* html::-webkit-scrollbar-track{
     background: #333;
 }
 
 html::-webkit-scrollbar-thumb{
-    background: var(--yellow);
-}
+    background: var(--blue);
+} */
 
 
 header{
@@ -57,15 +57,16 @@ header{
     margin-top:1rem;
     font-size: 1.5rem;
     border-radius: .5rem;
-    background: #333;
-    /* color: var(--yellow); */
+    background: white;
+    /* color: var(--blue); */
     position: relative;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
     overflow: hidden;
     z-index: 0;
+    
 }
 
-.btn::before{
+/* .btn::before{
     content: '';
     position: absolute;
     top: 0; left: 0;
@@ -75,15 +76,15 @@ header{
     z-index: 0;
     background: #333;
     transition: .3s cubic-bezier(.38,1.15,.7,1.12);
-}
+} */
 
 .btn:hover::before{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .btn:hover{
-    color: var(--yellow);
-
+    color: var(--blue);
+    background: #333;
 }
 
 .heading{
@@ -97,14 +98,14 @@ header{
 
 .heading i{
     padding: 0 .5rem;
-    color: var(--yellow);
+    color: var(--blue);
 }
 #search-box{
     position: absolute;
     top: 100%; left: 0;width: 100%;
     display: flex;
     align-items:center;
-    background: var(--yellow);
+    background: var(--blue);
     padding: 2rem;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     transform-origin: top;
@@ -142,7 +143,7 @@ header .logo{
 
 header .logo i{
     transform: rotate(-65deg);
-    color: var(--yellow);
+    color: var(--blue);
 }
 
 header .navbar a{
@@ -151,7 +152,7 @@ header .navbar a{
 }
 
 header .navbar a:hover{
-    color: var(--yellow);
+    color: var(--blue);
 }
 
 header .icons i, header .icons a{
@@ -162,7 +163,7 @@ header .icons i, header .icons a{
 }
 
 header .icons i:hover, header .icons a:hover{
-    color: var(--yellow);
+    color: var(--blue);
 }
 
 .fa-times{
@@ -180,15 +181,20 @@ header.sticky{
     position:fixed;
     top: 0;left: 0;right: 0;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+    opacity: 0;
 }
 
 .home{
     min-height: 75vh;
-    background: url(../images/home-bg.webp) no-repeat;
+    background: url(../images/home.PNG) no-repeat;
     background-size: cover;
     background-position: center center;
     display: flex;
     align-items: center;
+}
+
+.home .content{
+    padding: 3rem;
 }
 
 .home .content span{
@@ -197,7 +203,7 @@ header.sticky{
 }
 
 .home .content h3{
-    color:#333;
+    color: var(--blue);
     font-size:5.5rem;
 }
 
@@ -220,7 +226,8 @@ header.sticky{
 }
 
 .category .box-container .box img{
-    width: 100%;
+    width: 40vh;
+    height: 25vh;
 }
 
 .category .box-container .box h3{
@@ -243,7 +250,8 @@ header.sticky{
 }
 
 .featured .box-container .box img{
-    width: 20rem;
+    width: 30vh;
+    height: 25vh;
 }
 
 .featured .box-container .box .price{
@@ -254,7 +262,7 @@ header.sticky{
     text-align: center;
     line-height:6rem;
     border-radius: 50%;
-    background: var(--yellow);
+    background: var(--blue);
     color: #333;
     font-size:1.5rem;
 }
@@ -264,7 +272,7 @@ header.sticky{
 }
 
 .featured .box-container .box .content .stars{
-    color: var(--yellow);
+    color: yellow;
     font-size: 1.5rem;
 }
 
@@ -282,7 +290,7 @@ header.sticky{
 
 .deal{
     min-height: 75vh;
-    background: url(../images/deal-bg.webp) no-repeat;
+    background: url(../images/deal.PNG) no-repeat;
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -293,12 +301,12 @@ header.sticky{
 }
 
 .deal span{
-    color: #eee;
+    color: var(--blue);
     font-size: 2rem;
 }
 
 .deal h3{
-    color: #fff;
+    color: var(--blue);
     font-size: 4.5rem;
     padding: 1rem 0;
     width: 45rem;
@@ -326,6 +334,7 @@ header.sticky{
 
 .products .box-container .box img{
     width: 15rem;
+    height: 20vh;
 }
 
 .products .box-container .box .content{
@@ -334,7 +343,7 @@ header.sticky{
 
 .products .box-container .box .content .stars i{
     font-size:1.5rem;
-    color: var(--yellow);
+    color: yellow;
 }
 
 .products .box-container .box .content h3{
@@ -368,6 +377,7 @@ header.sticky{
 
 .offer .box-container .box img{
     width: 100%;
+    height: 60vh;
 }
 
 .offer .box-container .box .content{
@@ -390,12 +400,21 @@ header.sticky{
     background: #fff;
 }
 
+.offer .box-container .box:first-child .content .btn:hover{
+    background: #333;
+}
+
 .offer .box-container .box:last-child .content{
-    color: #fff;
+    color:var(--blue);
 }
 
 .contact{
-    background: url(../images/contact-bg.webp) no-repeat;
+    /* background: url(../images/contact-bg.webp) no-repeat; */
+    /* background: rgb(179, 179, 247); */
+    background: #a8e0f1;
+    background: -webkit-linear-gradient(#98e2e7, #a2d4e0);
+    background:    -moz-linear-gradient(#a0ebf5, #98ecf7);
+    background:         linear-gradient(#aaddec, #abd8e6);
     background-size: cover;
     background-position: center;
     padding-bottom: 7rem;;
@@ -444,7 +463,37 @@ header.sticky{
     background: #333;
 }
 
+.footer .share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
 
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    margin: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0;
+    /* background: var(--blue); */
+}
+
+.footer .credit{
+    padding: 2rem 1rem;
+    font-size:2rem;
+    border-top: .1rem solid rgba(0,0,0,0.1);
+    text-align: center;
+    color: #333;
+}
+
+.footer .credit span{
+    color: var(--blue);
+}
 
 /* media */
 @media (max-width: 400px){
@@ -546,6 +595,10 @@ header.sticky{
     
     .home .content h3{
         font-size:4.3rem;
+    }
+
+    .featured .box-container .box img{
+        width: 20vh;
     }
 
     .offer .box-container .box .content h3{
