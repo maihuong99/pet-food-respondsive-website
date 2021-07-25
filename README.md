@@ -1,2 +1,3 @@
 # pet-food-respondsive-website
-responsive website (html, css, jq)
+Responsive Website Design Using HTML / CSS / JS / JQUERY
+
