@@ -1,5 +1,5 @@
 $(document).ready(function(){
- 
+    console.log($('html').css("font-size"));
     $('#search-icon').click(function(){
         $(this).toggleClass('fa-times');
         $('#search-box').toggleClass('active');
