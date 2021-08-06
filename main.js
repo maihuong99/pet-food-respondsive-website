@@ -22,6 +22,10 @@ $(document).ready(function(){
         }else{
             $('header').removeClass('sticky');
         }
+    });
+
+    $('header .navbar a').on('click', function(){
+        $(this).addClass('active').siblings().removeClass('active');
     })
 
     //smooth scrolling

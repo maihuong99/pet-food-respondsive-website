@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 :root{
-    --blue:rgb(179, 179, 247);
+    --blue:rgb(81, 81, 252);
 }
 
 *{
@@ -11,7 +11,7 @@
     border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: 3s cubic-bezier(.38,1.15,.7,1.12);
+    transition: 1s cubic-bezier(.38,1.15,.7,1.12);
 }
 
 *::selection{
@@ -136,6 +136,14 @@ header{
     opacity: 1;
 }
 
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:1000;
+}
+
 header .logo{
     font-size: 2.5rem;
     color: #333;
@@ -151,8 +159,16 @@ header .navbar a{
     padding: 0 1rem;
 }
 
+header .navbar a.active{
+    background: var(--blue);
+    letter-spacing: .1rem;
+    border-radius: .5rem;
+    padding: .5rem;
+    font-weight: bold;
+}
+
 header .navbar a:hover{
-    color: var(--blue);
+    font-weight: bold;
 }
 
 header .icons i, header .icons a{
@@ -177,16 +193,15 @@ header .icons i:hover, header .icons a:hover{
     display: none
 }
 
-header.sticky{
+/* header.sticky{
     position:fixed;
     top: 0;left: 0;right: 0;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
-    opacity: 0;
-}
+} */
 
 .home{
-    min-height: 75vh;
-    background: url(../images/home.PNG) no-repeat;
+    min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGRvZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60") no-repeat;
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -289,8 +304,8 @@ header.sticky{
 }
 
 .deal{
-    min-height: 75vh;
-    background: url(../images/deal.PNG) no-repeat;
+    min-height: 80vh;
+    background: url("https://images.unsplash.com/photo-1582798358481-d199fb7347bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHBldCUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60") no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -411,13 +426,14 @@ header.sticky{
 .contact{
     /* background: url(../images/contact-bg.webp) no-repeat; */
     /* background: rgb(179, 179, 247); */
-    background: #a8e0f1;
-    background: -webkit-linear-gradient(#98e2e7, #a2d4e0);
-    background:    -moz-linear-gradient(#a0ebf5, #98ecf7);
-    background:         linear-gradient(#aaddec, #abd8e6);
+    background: var(--blue);
+    /* background: -webkit-linear-gradient(#3b75e2, #3d6df1);
+    background:    -moz-linear-gradient(#3d32db, #5b75e9);
+    background:         linear-gradient(#5d73bb, #5250ca); */
     background-size: cover;
     background-position: center;
-    padding-bottom: 7rem;;
+    padding-bottom: 5rem;
+    border-radius:2rem;
 }
 
 .contact .heading i{
@@ -480,7 +496,8 @@ header.sticky{
     font-size: 2rem;
     text-align: center;
     padding: 0;
-    /* background: var(--blue); */
+    color: var(--blue)
+    
 }
 
 .footer .credit{
